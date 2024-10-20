@@ -3,11 +3,16 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
+
+% da usare se l'header ha altezza inconsistente tra pagine
+% \setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
 
 \def \titolo {TITOLO DOCUMENTO}
+% Si può lasciare vuoto se non necessario
 \def \sottotitolo {Sottotitolo}
-
-\geometry{a4paper,total={155mm,240mm},top=30mm,}
 
 \begin{document}
     % titolo
