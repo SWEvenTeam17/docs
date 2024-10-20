@@ -1,0 +1,43 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+\def \titolo {Domande per aggiudicazione appalti}
+\def \sottotitolo {Documento che comprende eventuali domande da porre ai colloqui con le aziende.}
+
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    \newpage
+    Capitolato C9 BuddyBot
+    \begin{itemize}
+        \item Funzionamento della repository messa a disposizione dell'azienda (diritti, hosting, evenutale possibilità di crearne una autonomamente)
+        \item L'azienda mette a disposizione 4 referenti per il supporto agli studenti, sono disponibili corsi di formazione sulle tecnologie?
+        \item Approfondire il sistema di bug reporting menzionato nella presentazione
+        \item Eventualmente chiedere data di consegna ideale
+        \item Nella presentazione è richiesta la creazione di una suite di test, non è tuttavia specificato il code coverage da raggiungere
+    \end{itemize}
+
+    Capitolato C5 3Dataviz
+    \begin{itemize}
+        \item Chiedere quale delle due modalità di sviluppo è preferibile per l'use case dell'azienda
+        \item Nel caso di popolamento dati tramite SQL chiedere quale database è meglio integrare
+        \item Eventualmente chiedere data di consegna ideale
+    \end{itemize}
+
+    Capitolato C7 Assitente Virtuale
+    \begin{itemize}
+        \item Possibilità di utilizzare altre tecnologie rispetto a quelle proposte? 
+        \item Eventualmente chiedere data di consegna ideale
+    \end{itemize}
+\end{document}
