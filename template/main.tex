@@ -4,15 +4,18 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
 
-% da usare se l'header ha altezza inconsistente tra pagine
-% \setlength{\headheight}{40.5633pt}
-\hypersetup{colorlinks=true,linkcolor=blue}
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
 \geometry{a4paper,total={155mm,240mm},top=30mm,}
 
 \def \titolo {TITOLO DOCUMENTO}
 % Si può lasciare vuoto se non necessario
 \def \sottotitolo {Sottotitolo}
+\def \azienda {NOME AZIENDA}
 
 \begin{document}
     % titolo
@@ -28,4 +31,7 @@
     \renewcommand{\contentsname}{Indice}
     \tableofcontents
     \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
 \end{document}
