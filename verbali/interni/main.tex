@@ -1,0 +1,73 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {TITOLO DOCUMENTO}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+    \section{Ordine del giorno}
+    Argomenti trattati durante l'incontro:
+    \begin{itemize}
+        \item Scelta del nome e del logo
+        \item Creazione dell'indirizzo di posta elettronica del gruppo
+        \item Discussione sui capitolati proposti
+        \item Richiesta di colloquio con il proponente del capitolato scelto
+    \end{itemize}
+
+    \section{Resoconto dell'incontro}
+    \subsection{Nome e logo scelti}
+    \begin{itemize}
+        \item Il nome scelto è: \textbf{SWEvenTeam}
+        \item Il logo è stato creato da \textbf{Yuri Lunardon} e riprende il nome del gruppo
+        \item Per l'indirizzo di posta elettronica è stato scelto \textbf{Outlook}
+    \end{itemize}
+    \subsection{Discussione sui capitolati proposti}
+    I capitolati, scelti tramite discussione e successiva votazione, sono i seguenti:
+    \begin{itemize}
+    \item C1: \textbf{Artificial QI} proposto da Zucchetti
+    \item C8: \textbf{Requirement Tracker} proposto da Bluewind
+    \item C7: \textbf{LLM: Assistente virtuale} proposto da ERGON
+    \end{itemize}
+    Il capitolato che ha ottenuto più voti è stato \textbf{Artificial QI}. \\
+    Il gruppo ha provveduto quindi a fissare un incontro con l'azienda Zucchetti per porre domande in merito al capitolato.\\
+    \newpage
+    \section{Storia del documento}
+    \begin{center}
+        \begin{tabular}{ |c|c|c|p{5cm}| } 
+         \hline
+         Versione & Data & Autori & Descrizione \\ 
+         \hline
+         0.1 & 21/10/2024 & Matteo Mazzotti, Alessio Turetta & Creazione del documento, compilate sezioni da 1 a 4 \\ 
+         \hline
+        \end{tabular}
+    \end{center}
+\end{document}
