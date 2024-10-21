@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{xcolor}
+\usepackage{makecell}
 
 % l'header potrebbe avere altezza inconsistente tra pagine
 \setlength{\headheight}{40.5633pt}
@@ -34,18 +35,51 @@
 
     \section{Capitolato C1 - Artificial QI}
     \subsection{Informazioni del progetto}
-    \subsection{Tecnologie utilizzate}
-    \subsection{Pro e Contro}
+    Il progetto, proposto da \textbf{Zucchetti SPA}, tratta come obiettivo la Creazione
+    di un sistema unico (non diviso in moduli) che analizza diversi \textbf{LLM}
+    rispetto a grandi insiemi di domande e risposte in linguaggio naturale tramite
+    \textbf{test automatizzati}. L'azienda richiede come caratteristica principale l'implementazione
+    di un metodo di verifica per la risposta di un LLM, proponendo tre possibili soluzioni note:
+    \begin{itemize}
+        \item Utilizzare un LLM di capacità superiore come base di confronto.
+        \item Specificare la risposta assieme alla domanda, mettendola a confronto con la risposta ottenuta.
+        \item Utilizzare metodi classici per il confronto (es. algoritmi che gestiscono risposte in formati strutturati)
+    \end{itemize}
+    I requisiti obbligatori per il \textbf{Proof of Concept} includono la creazione di un'applicazione
+    che riceve e archivia una lista di domande e risposte (ordine di grandezza sulle centinaia), la quale viene
+    poi elaborata su una API esterna (LLM), ritornando un set di risposte su cui proseguire con gli algoritmi e/o sottoprogrammi di test.
+    I risultati sono infine catalogati e presentati tramite interfaccia utente. Opzionalmente è possibile progettare una soluzione al problema dei test in maniera completamente autonoma,
+    oltre a richieste aggiuntive verso il prodotto finale.\\
+    La consegna finale deve prevedere:
+    \begin{itemize}
+        \item Codice sorgente prodotto su sistemi di versionamento come \textbf{GitHub};
+        \item Documentazione minima (come dettato dal corso), manuale per l'utilizzo e documentazione per sviluppatori
+        \item Favorimento dell'\textbf{estendibilità e manutenzione} da terze parti.
+    \end{itemize}
+    \subsection{Tecnologie previste}
+    Non sono previste tecnologie specifiche riguardo all'intero progetto, se non l'unico obbligo di mantenere l'implementazione
+    nel campo del \textbf{Web}, mentre è consigliata la ricerca di LLM alternativi tramite servizi specifici (LMSYS, Hugging Face).
+    \subsection{Vantaggi e Svantaggi}
+    \textbf{Vantaggi:}
+    \begin{itemize}
+        \item Libertà (quasi) assoluta nella scelta delle tecnologie, come specificato in 1.2;
+        \item L'azienda incita a pubblicare il progetto su piattaforme \textbf{open source};
+        \item Buona introduzione agli LLM, poiché i membri del gruppo non hanno esperienza sull'argomento.
+    \end{itemize}
+    L'unico svantaggio è l'incognita delle scelte che dovremo fare riguardo le tecnologie da utilizzare,
+    data la nostra poca familiarità con un progetto di Software Engineering.
 
     \section{Capitolato C8 - Requirement Tracker}
     \subsection{Informazioni del progetto}
-    \subsection{Tecnologie utilizzate}
-    \subsection{Pro e Contro}
+    \subsection{Tecnologie previste}
+    \subsection{Vantaggi e Svantaggi}
 
     \section{Capitolato C7 - LLM: Assistente Virtuale}
     \subsection{Informazioni del progetto}
-    \subsection{Tecnologie utilizzate}
-    \subsection{Pro e Contro}
+    \subsection{Tecnologie previste}
+    \subsection{Vantaggi e Svantaggi}
 
     \section{Altri capitolati}
+
+    \input{version.tex}
 \end{document}
