@@ -1,0 +1,51 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {STUDIO DEI CAPITOLATI}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    \section{Capitolato C1 - Artificial QI}
+    \subsection{Informazioni del progetto}
+    \subsection{Tecnologie utilizzate}
+    \subsection{Pro e Contro}
+
+    \section{Capitolato C8 - Requirement Tracker}
+    \subsection{Informazioni del progetto}
+    \subsection{Tecnologie utilizzate}
+    \subsection{Pro e Contro}
+
+    \section{Capitolato C7 - LLM: Assistente Virtuale}
+    \subsection{Informazioni del progetto}
+    \subsection{Tecnologie utilizzate}
+    \subsection{Pro e Contro}
+
+    \section{Altri capitolati}
+\end{document}
