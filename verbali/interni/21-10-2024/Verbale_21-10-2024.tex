@@ -5,7 +5,7 @@
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{multirow}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 
 % l'header potrebbe avere altezza inconsistente tra pagine
 \setlength{\headheight}{40.5633pt}
@@ -60,17 +60,17 @@
     Il capitolato che ha ottenuto più voti è stato \textbf{Artificial QI}. \\
     Il gruppo ha provveduto quindi a fissare un incontro con l'azienda Zucchetti per porre domande in merito al capitolato.\\
     \newpage
+
     \section{Storia del documento}
     \begin{center}
-        \begin{tabular}{ |c|c|l|p{5cm}| } 
-         \hline
-         Versione & Data & Autori & Descrizione \\ 
-         \hline
-         0.2 & 21/10/2024 & Matteo Mazzotti & Aggiunti titolo e sottotitolo \\ 
-         \hline
-         0.1 & 21/10/2024 & Matteo Mazzotti, Alessio Turetta & Creazione del documento, compilate sezioni da 1 a 4 \\ 
-         \hline
-
+        \begin{tabular}{ c c p{3.5cm} p{5cm} }
+            \rowcolor{gray!20}\rule{0pt}{0.5cm}\textbf{Versione} & \textbf{Data} & \textbf{Autori} & \textbf{Descrizione} \\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}0.3 & 22/10/2024 & Alessandro Damiani & Aggiornamento grafico\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}0.2 & 21/10/2024 & Matteo Mazzotti & Aggiunti titolo e sottotitolo\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}0.1 & 21/10/2024 & Matteo Mazzotti & Creazione del documento, compilate sezioni da 1 a 4\\[0.7ex]
         \end{tabular}
-    \end{center}
+\end{center}
 \end{document}
