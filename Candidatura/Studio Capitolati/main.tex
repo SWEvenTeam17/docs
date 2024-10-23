@@ -58,9 +58,11 @@
         \item Documentazione minima (come dettato dal corso), manuale per l'utilizzo e documentazione per sviluppatori
         \item Favorimento dell'\textbf{estensibilità e manutenzione} da terze parti.
     \end{itemize}
+    
     \subsection{Tecnologie previste}
     Non sono previste tecnologie specifiche riguardo all'intero progetto, se non l'unico obbligo di mantenere l'implementazione
     nel campo del \textbf{Web}, mentre è consigliata la ricerca di LLM alternativi tramite servizi specifici (LMSYS, Hugging Face).
+    
     \subsection{Vantaggi e Svantaggi}
     \textbf{Vantaggi:}
     \begin{itemize}
@@ -70,6 +72,7 @@
     \end{itemize}
     L'unico \textbf{svantaggio} è l'incognita delle scelte che dovremo fare riguardo le tecnologie da utilizzare,
     data la nostra poca familiarità con un progetto di Software Engineering.
+
 
     \newpage
     \section{Capitolato C8 - Requirement Tracker}
@@ -96,10 +99,12 @@
         \item Manuale d'uso per l'utente finale.
     \end{itemize}
     Infine vi sono alcuni requisiti opzionali per raggiungere il prodotto finale, per esempio il supporto a diversi linguaggi.
+    
     \subsection{Tecnologie previste}
     Dati i requisiti, il progetto richiede l'uso delle \textbf{VSCode Extension API} insieme alle \textbf{API REST} per la connessione
     ai modelli AI. Sono inoltre consigliati dall'azienda \textbf{Python o Node.js} per l'integrazione del modello, uno o più LLM pre-addestrati (es. \textbf{GPT}),
     e alternativamente Ollama per l'uso di LLM locale.
+    
     \subsection{Vantaggi e Svantaggi}
     \textbf{Vantaggi:}
     \begin{itemize}
@@ -113,22 +118,24 @@
         \item La dipendenza da tecnologie molto specifiche potrebbe essere difficile da gestirne l'apprendimento come gruppo.
     \end{itemize}
 
+
     \section{Capitolato C7 - LLM: Assistente Virtuale}
     \subsection{Informazioni del progetto}
     Questo progetto di \textbf{Ergon Informatica Srl} riguarda la creazione di un \textbf{assistente virtuale}
     per aziende che vendono prodotti e ricevono ordini multiprodotto dai clienti.
     Specificatamente, l'obiettivo dell'assistente virtuale è facilitare l'accesso alle informazioni
     sui prodotti disponibili, tramite predizioni della domanda e analisi della profilazione
-    della clientela, ovviamente prevedendo l'applicazione di modelli LLM.\\
+    della clientela, ovviamente prevedendo l'applicazione di modelli AI.\\
     Non vengono presentati Proof of Concept e Minimum Viable Product particolari, ma sono comunque descritte
     le richieste obbligatorie, con particolare attenzione all'implementazione suddivisa in moduli che comunicano tra di loro:
     \begin{itemize}
-        \item Database relazionale per gestire i dati che verranno usati dal modello LLM per l'apprendimento;
+        \item Database relazionale per gestire i dati che verranno usati dal modello AI per l'apprendimento;
         \item Web Server che riceve i dati, li suddivide in blocchi vettoriali (\textbf{Embedding Model}) e li archivia;
         \item Interfaccia utente mobile che invia le domande (tramite API REST) e ritorna una risposta generata dal sistema LLM, utilizzando il database vettoriale;
         \item Documentazione minima, che include la progettazione, schema del database, implementazione del sistema;
         \item Codice sorgente disponibile in una repository pubblica.
     \end{itemize}
+    
     \subsection{Tecnologie previste}
     Non vi sono richieste tecnologiche strettamente necessarie, tuttavia sono raccomandati diversi sistemi per ogni modulo:
     \begin{itemize}
@@ -138,6 +145,7 @@
         \item \textbf{Interfaccia utente} su applicazione mobile, con .NET, MAUI o Android;
         \item \textbf{Back-end} web per l'applicazione mobile.
     \end{itemize}
+    
     \subsection{Vantaggi e Svantaggi}
     \textbf{Vantaggi:}
     \begin{itemize}
@@ -153,35 +161,52 @@
         \item Oggetto di interesse potrebbe essere all'apparenza banale;
         \item Alcune tecnologie e framework (come .NET) richiederebbero molto tempo dedicato al loro studio.
     \end{itemize}
+    
+    
     \section{Altri capitolati}
     \subsection{Capitolato C2 - Vimar GENIALE}
-    Il progetto prevede un'applicazione web responsive che implementa un modello LLM come
+    Il progetto prevede un'applicazione web responsive che implementa un modello AI come
     assistente virtuale sulla ricerca di informazioni dei prodotti Vimar, con infrastruttura cloud.\\
     Il capitolato non è stato considerato dal gruppo per mancato interesse.
+    
     \subsection{Capitolato C3 - Automatizzare le routine digitali}
     Il sistema proposto dall'azienda deve implementare un cloud di AI generativa integrato con software locali
     per automatizzare attività quotidiane, in un'applicazione user-friendly su Windows e/o Mac.\\
     Il gruppo ha deciso di scartare il capitolato dato lo scarso interesse della proposizione.
+    
     \subsection{Capitolato C4 - NearYou}
     NearYou ha lo scopo di impostare una piattaforma di pubblicità basata su modelli AI e geolocalizzazione,
     per generare annunci adatti al contesto in tempo reale; specificatamente sono richiesti simulatori di dati GPS,
     sistemi di gestione delle informazioni e l'implementazione di tecnologie per la personalizzazione dinamica.\\
     Nonostante ci fosse un interesse iniziale sul capitolato, è stato deciso di non scegliere NearYou poiché ritenuto potenzialmente
     troppo complesso da gestire.
+    
     \subsection{Capitolato C5 - 3Dataviz}
     3Dataviz richiede lo sviluppo di un'interfaccia web interattiva per la visualizzazione di dati su piccola e larga scala con istogrammi tridimensionali,
     interamente basato su framework e librerie web (three.js, Angular, React).\\
     Dopo una discussione a riguardo, il gruppo ha concluso che 3Dataviz ha un ambito troppo ridotto per un progetto
     sviluppato da sette persone.
+    
     \subsection{Capitolato C6 - Sistema di gestione di un magazzino distribuito}
     L'architettura del progetto prevede un sistema di microservizi, che ottimizzano e gestiscono magazzini, in particolar
     modo sincronizzando i dati, perfezionando i livelli di inventario, e prevedendo
     il riassortimento tramite Machine Learning, allo scopo di garantire un flusso costante di materiali tra magazzini.\\
     Il progetto è stato scartato per scarso interesse da parte del gruppo.
+    
     \subsection{Capitolato C9 - BuddyBot}
     L'obiettivo di BuddyBot è migliorare la produttività dei team di sviluppo, centralizzando tutte le fonti di
     conoscenza interna aziendali (GitHub, Jira, Confluence, ecc.) in un assistente virtuale con LLM su interfaccia utente web.\\
     Inizialmente questo progetto era molto gettonato nel gruppo, tuttavia dopo un'attenta valutazione si è giunti alla conclusione
     che il gruppo non è abbastanza confidente nell'intraprendere questo capitolato.
+    
+    \newpage
+    \section{Scelta finale}
+    Dopo un'attenta analisi dei tre capitolati preferiti del gruppo (C1, C8, C7) siamo giunti alla decisione che
+    ci impegneremo al progetto \textbf{Artificial QI}. Il punto di forza più accattivante è la libertà che avremo
+    nella selezione delle tecnologie da applicare al progetto, poiché rispecchierebbe l'intensità di lavoro che siamo
+    disposti a dedicare, considerando che ogni membro del gruppo dovrà imparare diversi aspetti delle tecnologie che useremo.
+    Ovviamente ci è sembrato di interesse anche l'oggetto di studio del capitolato, cioè la valutazione
+    di diversi LLM con una serie di approcci, pensati dall'azienda proponente, oppure possibilmente da noi in fase di design.
+
     \input{version.tex}
 \end{document}
