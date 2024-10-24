@@ -302,3 +302,6 @@ TSWLatexianTemp*
 
 # template pdf
 template/*.pdf
+
+# macOS
+.DS_Store
