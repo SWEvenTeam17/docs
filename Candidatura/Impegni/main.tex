@@ -1,0 +1,113 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{eurosym}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {DICHIARAZIONE IMPEGNI}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % inserisci corpo
+    \section{Analisi dei ruoli}
+    Le considerazioni riguardo ai ruoli del progetto sono basati sul \textbf{Capitolato C1},
+    in quanto scelto dal gruppo come progetto da seguire. Queste scelte potrebbero variare
+    durante lo sviluppo per problemi di distribuzione delle ore per membro, o impegni aggiuntivi
+    che influenzerebbero le priorità.
+
+    \subsection{Responsabile}
+    Le attività di coordinazione, approvazione e gestione delle risorse
+    non richiederebbero quantità di lavoro in proporzione molto alta rispetto agli
+    altri ruoli, essendo anche un ruolo particolarmente dispendioso dato il costo orario.
+    Per questi motivi, il gruppo cercherà di eseguire le attività del responsabile con una certa efficienza
+    per rientrare nei costi.
+
+    \subsection{Amministratore}
+    Similmente al responsabile, le ore necessarie che dovrebbero occupare il ruolo di amministratore
+    saranno in minor numero, principalmente perché il controllo delle tecnologie, procedure e strumenti
+    è potenzialmente meno intensivo, pur sempre rimanendo un ruolo cruciale per mantenere la stabilità
+    del progetto.
+
+    \subsection{Analista}
+    L'analisi dei requisiti, per quanto sia in ogni caso utile alla definizione dei requisiti semantici
+    e tecnici, è strettamente necessaria solo per alcune fasi dello sviluppo, principalmente nel primo periodo,
+    in cui l'analista deve impostare dei requisiti ben definiti, quindi il ruolo non seguirà il progetto nella sua
+    interezza.
+
+    \subsection{Progettista}
+    Come caso particolare del progetto \textbf{Artificial QI}, il design dell'architettura è fondamentale,
+    almeno sul lato LLM, poiché richiederà attenzione particolare per definire dei test completi ed efficaci
+    su un modello AI. Di fatto, il ruolo di progettista coprirà una parte più considerevole di tempo rispetto
+    ai precedenti, soprattutto perché ottenere una buona architettura è cruciale per l'efficienza e affidabilità del progetto,
+    e quindi soddisfare i requisiti. Ciononostante il costo orario del ruolo relativamente alto porta al dover ridurre leggermente le ore
+    in proporzione al programmatore e verificatore.
+
+    \subsection{Programmatore}
+    L'implementazione dell'architettura è altrettanto importante, e anche grazie al costo orario minore rispetto al progettista, è possibile
+    dedicare maggior parte del tempo a disposizione sul ruolo del programmatore. Ciò è anche utile al gruppo per garantire un'ampio periodo di
+    sviluppo in fase di implementazione, specialmente per ammortizzare possibili disguidi a causa di errori a livello di design o problem solving.
+
+    \subsection{Verificatore}
+    Poiché la fase di verifica è parallela all'implementazione, anche questo ruolo dovrà seguire il progetto per intero, e quindi
+    la porzione delle ore totali associata sarà considerevole, con lo scopo di garantire la robustezza, correttezza e fruibilità dall'utente finale
+    del prodotto.
+
+    \newpage
+    \section{Impegni orari}
+    Sulla base delle considerazioni nel capitolo 1, ogni membro del gruppo dovrà dedicare al progetto un totale di
+    \textbf{94 ore produttive}, per un totale complessivo di 658 ore, spartite per ruolo in base alle necessità nella
+    seguente tabella:
+    \begin{center}
+        \begin{tabular}{c c c c}
+            \rowcolor{gray!20}\rule{0pt}{0.5cm}\textbf{Ruoli} & \textbf{Costo orario} & \textbf{Ore per ruolo} & \textbf{Ore per membro} \\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}Responsabile & \EUR{30} & 63 & 9\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}Amministratore & \EUR{20} & 70 & 10\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}Analista & \EUR{25} & 63 & 9\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}Progettista & \EUR{25} & 105 & 15\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}Programmatore & \EUR{15} & 196 & 28\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm}Verificatore & \EUR{15} & 161 & 23\\[0.7ex]
+            \hline
+            \rule{0pt}{0.5cm} & \textbf{Costo totale} & \textbf{Ore totali} & \textbf{Ore totali}\\[0.7ex]
+            & \EUR{12\,845} & 658 & 94\\
+        \end{tabular}
+    \end{center}
+
+    \section{Preventivo e data di consegna}
+    Come specificato nella tabella precedente, il costo totale, e quindi il preventivo
+    calcolato ammonta a \textbf{\EUR{12\,845}}. Il gruppo ha stimato anche una teorica data di
+    termine dello sviluppo e successiva consegna del prodotto entro la data \textbf{15-04-2025}.
+
+    % versionamento
+    \input{version.tex}
+\end{document}
