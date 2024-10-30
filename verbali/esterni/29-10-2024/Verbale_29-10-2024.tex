@@ -7,6 +7,7 @@
 \usepackage{multirow}
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
+\usepackage[italian]{babel}
 
 % l'header potrebbe avere altezza inconsistente tra pagine
 \setlength{\headheight}{40.5633pt}
@@ -56,7 +57,7 @@
     \textnormal{Lo scopo non è fissare un unico modello ma avere un'architettura che permetta di modificarlo in fase di set-up o sostituirlo in futuro, in quanto i modelli diventano obsoleti velocemente. Perciò, è preferibile che il sistema sia indipendente dal modello. Durante lo sviluppo del progetto, si potrà scegliere di adottare 2-3 modelli di riferimento, per questo motivo l'azienda invita ad utilizzare altre API oltre a quella consigliata.} 
 
     \subsection{Domanda 3 - Code Coverage}
-    \textbf{ Il code coverage all'80\% riguarda l'architettura in sé e le sue funzionalità oppure l'LLM?} 
+    \textbf{Il code coverage all'80\% riguarda l'architettura in sé e le sue funzionalità oppure l'LLM?} 
     \\
     \textnormal{Il code coverage riguarda le funzionalità implementate, in particolare il testing del plug-in stesso per garantire un buon flusso. Inoltre, non ha senso valutare il code coverage rispetto ai file di input, poichè non ci sono vincoli specifici.} 
     
@@ -80,7 +81,7 @@
     \\
     \textnormal{L'obiettivo principale è personalizzare il modello in modo che risponda all'interno dell'ambito fornito dall'azienda. L'ideale sarebbe partire dai modelli scelti e successivamente espandere la loro conoscenza con i file di un progetto, usato come test, in modo tale da verificare che il modello sia in grado di rispondere in maniera sensata.} 
 
-    \subsection{Domanda 8 - Richieste minime POC}
+    \subsection{Domanda 8 - Richieste minime PoC}
     \textbf{Nel PoC, le richieste minime chiedono che ci sia un'architettura funzionante?} 
     \\
     \textnormal{Le richieste sono poche, ma riuscire a realizzare un'architettura buona che sia modulare non è semplice. Tuttavia, la quantità di lavoro può essere espansa notevolmente nella fase di prompting e nella sua gestione.} 
