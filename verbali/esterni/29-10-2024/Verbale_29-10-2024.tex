@@ -1,0 +1,104 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE ESTERNO 29-10-2024}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Incontro con Bluewind s.r.l.}
+\def \azienda {Bluewind}
+
+\begin{document}
+    \sloppy
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni incontro
+    \input{info.tex}
+    
+    % firma
+    \input{signature.tex}
+    \newpage
+
+    % main
+    \section{Resoconto dell'incontro}
+    Il gruppo ha scelto di contattare l’azienda Bluewind s.r.l per chiedere chiarimenti su alcuni aspetti del capitolato, ritenuto di potenziale interesse. Questo passaggio faciliterà l'avvio del progetto con maggiore chiarezza e una migliore comprensione delle aspettative aziendali.
+
+
+    \subsection{Domanda 1 - Input MVP}
+    \textbf{È obbligatorio mettere un csv come formato di ingresso del MVP?} 
+    \\
+    \textnormal{Il csv non è obbligatorio ma è il più semplice, anche se poi l’azienda nei sistemi reali utilizza un formato XML chiamato reqif. I tempi necessari per mettere insieme un sistema che sia in grado di ‘parsare’ un csv e un reqif sono diversi e siccome lo scopo del sistema che andremo a realizzare non si concentra sul parsing, è stato consigliato l’uso del csv. Inoltre, il csv è più utile per costruire un sistema incrementale in quanto esistono già le librerie che gestiscono bene questo formato.
+} 
+    \subsection{Domanda 2 - Dettagli del Modello}
+    \textbf{A seguito di un’indagine preliminare, si è osservato che la piattaforma Ollama ha diversi modelli in base ai parametri. Quali sono ,dunque, le caratteristiche del modello che il gruppo andrà ad utilizzare in locale?} 
+    \\
+    \textnormal{Lo scopo non è fissare un modello ma avere un'architettura che permetta di modificarlo in fase di set-up o sostituirlo in futuro, in quanto i modelli diventano obsoleti velocemente. Perciò, è preferibile che il sistema sia staccato dal modello. Durante lo sviluppo del progetto si potranno scegliere di utilizzare 2-3 modelli di riferimento, per questo motivo l’azienda invita ad utilizzare altre API oltre a quella consigliata.} 
+
+    \subsection{Domanda 3 - Code Coverage}
+    \textbf{ Il code coverage all’80% riguarda l'architettura in sé e le sue funzionalità oppure LLM?} 
+    \\
+    \textnormal{Il code coverage riguarda le funzionalità implementate, in particolare il testing del plug-in stesso per garantire un buon flusso. Inoltre, il code coverage non ha senso valutarlo rispetto ai file di input in quanto non si ha nessun vincolo.} 
+    
+    \subsection{Domanda 4 - Linguaggio Plug-In}
+    \textbf{Per il plug-in si usa essenzialmente Node.js/Javascript?} 
+    \\
+    \textnormal{Javascript è solitamente il più utilizzato, tuttavia, si dovrà decidere a tempo debito cosa usare, cercando di capire quale linguaggio si adatta meglio in base alle necessità. L’azienda consiglia inizialmente di usare un plug-in con codice già esistente per allenarsi e successivamente utilizzare altri linguaggi per capire quale conviene, anche attraverso l’uso di test.} 
+    
+    \subsection{Domanda 5 - Corsi di formazione}
+    \textbf{Sono previsti dei corsi di formazione ?} 
+    \\
+    \textnormal{I corsi di formazione non sono previsti, tuttavia l’azienda ha rassicurato che il team di supporto è disponibile e disposto ad affiancare il gruppo durante lo svolgimento del progetto. Inoltre, l'azienda provvederà a fornire uno Use Case completo per i requisiti.}
+
+    \subsection{Domanda 6 - Consegna ideale del progetto}
+    \textbf{Quali sono le aspettative sulle tempistiche per finire la MVP?} 
+    \\
+    \textnormal{L’azienda ritiene che la possibile consegna del progetto sia tra aprile e maggio. L'azienda non ha delle scadenze rigide tuttavia consiglia di bilanciare le attività e dare un ordine alle funzionalità da implementare, magari attraverso l’uso di una lista di priorità.} 
+
+    \subsection{Domanda 7 - Addestramento del Modello}
+    \textbf{Essendo che l’implementazione in sé del modello è una parte secondaria, c’è qualche requisito per l’addestramento del modello?} 
+    \\
+    \textnormal{L'obiettivo principale è personalizzare il modello in modo che risponda all'interno dell'ambito fornito dall'azienda. L’ideale sarebbe partire dai modelli scelti e successivamente espandere la loro conoscenza con i file di un progetto, usato come test, in modo tale da verificare che il modello sia in grado di rispondere in maniera sensata.} 
+
+    \subsection{Domanda 8 - Richieste minime POC}
+    \textbf{Nel POC, le richieste minime chiedono che ci sia un’architettura funzionante?} 
+    \\
+    \textnormal{Le richieste sono poche ma riuscire a realizzare un’architettura buona che sia modulare non è semplice. Tuttavia, la quantità di lavoro può essere espansa notevolmente nella fase di prompting e nella sua gestione.} 
+    
+    \subsection{Domanda 9 - Sito di Hosting}
+    \textbf{È possibile usare qualsiasi sito di hosting per il versionamento, tenendo conto dei problemi di privacy?} 
+    \\
+    \textnormal{Non vengono posti vincoli per il versionamento e l’azienda si è dimostrata aperta a qualsiasi sito che il gruppo utilizzerà, in quanto, a livello puramente di progetto non ci sono problemi di privacy.
+} 
+    
+    
+    \section{Conclusioni}
+   L'incontro ha permesso al gruppo di chiarire alcune incertezze emerse durante la fase iniziale di analisi del capitolato, offrendo una visione più dettagliata del progetto.
+    \newpage
+    \newpage
+
+    % versionamento
+    \input{version.tex} 
+
+
+\end{document}
