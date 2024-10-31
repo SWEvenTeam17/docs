@@ -1,0 +1,91 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {LETTERA DI PRESENTAZIONE}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {}
+\def \azienda {}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+
+    % indice
+    % \renewcommand{\contentsname}{Indice}
+    % \tableofcontents
+    \newpage
+
+    \newpage
+    \noindent Egregio Prof. Vardanega, \\
+    Egregio Prof. Cardin, \\
+    con la presente, il gruppo \textbf{SWEvenTeam} intende comunicarVi l'intenzione di candidarsi ed \mbox{impegnarsi} nella realizzazione del progetto denominato:
+    
+    \begin{center}
+        \textbf{Artificial QI}
+    \end{center}
+
+    \noindent da Voi commissionato e gentilmente proposto dall'azienda \textbf{Zucchetti S.p.A.} nel capitolato C1.
+    
+    % Linea orizzontale
+    \begin{center}
+        \rule{0.7\linewidth}{0.2pt}
+    \end{center}
+
+    \noindent La documentazione dettagliata relativa ai verbali interni ed esterni, alla valutazione dei capitolati d'appalto e al preventivo dei costi e impegni orari è consultabile al seguente link:
+    \begin{center}
+        {\href{https://github.com/SWEvenTeam17/documentazione}{https://github.com/SWEvenTeam17/documentazione}}
+    \end{center}
+
+    \noindent All'interno della repository sono presenti, nel dettaglio:
+    \begin{itemize}
+        \item Studio dei capitolati;
+        \item Preventivo costi e impegni orari;
+        \item Lettera di presentazione;
+        \item Verbali interni:
+        \begin{itemize}
+            \item 21 ottobre 2024;
+            \item 25 ottobre 2024;
+            \item 31 ottobre 2024;
+        \end{itemize}
+        \item Verbali esterni:
+        \begin{itemize}
+            \item 25 ottobre 2024 (\textit{Zucchetti S.p.A.});
+            \item 29 ottobre 2024 (\textit{Bluewind S.r.l.});            
+        \end{itemize}
+    \end{itemize}
+    
+    % Linea orizzontale
+    \begin{center}
+        \rule{0.7\linewidth}{0.2pt}
+    \end{center}
+
+    \noindent Come riportato nel documento \textit{Preventivo costi e impegni orari}, il gruppo ha preventivato, per la realizzazione del progetto, un costo totale di \textbf{€ 12.775} e prevede di completare il lavoro entro il \textbf{28 aprile 2025}.
+    \\
+    \\
+    \begin{flushright}
+        Cordiali saluti, \\
+        il gruppo \textit{SWEvenTeam}
+    \end{flushright}
+
+    \newpage
+    % versionamento
+    \input{version.tex} 
+\end{document}
