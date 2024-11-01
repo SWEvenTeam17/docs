@@ -1,0 +1,51 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {Verbale 25-10-24}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Secondo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+
+    \section{Ordine del giorno}
+    \subsection{Revisione capitolato C1}
+    In seguito all’incontro con Zucchetti si è nuovamente discusso del capitolato migliorando la conoscenza dello stesso. L’interesse è rinnovato.
+    \subsection{Domande capitolato Bluewind}
+    Definite le domande da porre all’azienda si è proceduto a contattarla per fissare un incontro. Questo rappresenta il secondo e ultimo incontro programmato con i proponenti. Seguirà la decisione sul capitolato.
+    \subsection{Documentazione candidatura}
+    È stata formulata una struttura cui attenersi per la realizzazione dei documenti per la candidatura. È stata abbozzata una stima delle ore suddivise per ruoli e una possibile data di scadenza.
+    \subsection{Presentazione candidatura}
+    I documentati verranno presentati tramite una repository pubblica di GitHub. Viene definito uno schema su come organizzarlo.
+    \newpage
+    % versionamento
+    \input{version.tex} 
+\end{document}
