@@ -35,28 +35,28 @@
 
     \section{Capitolato C1 - Artificial QI}
     \subsection{Informazioni del progetto}
-    Il progetto, proposto da \textbf{Zucchetti SPA}, tratta come obiettivo la creazione
+    Il progetto, proposto da \textbf{Zucchetti S.p.A.}, tratta come obiettivo la creazione
     di un sistema unico (non diviso in moduli) che analizza diversi \textbf{LLM}
     rispetto a grandi insiemi di domande e risposte in linguaggio naturale tramite
     \textbf{test automatizzati}. L'azienda richiede come caratteristica principale l'implementazione
     di un metodo di verifica per la risposta di un LLM, proponendo tre possibili soluzioni note:
     \begin{itemize}
-        \item Utilizzare un LLM di capacità superiore come base di confronto.
-        \item Specificare la risposta assieme alla domanda, mettendola a confronto con la risposta ottenuta.
-        \item Utilizzare metodi classici per il confronto (es. algoritmi che gestiscono risposte in formati strutturati)
+        \item utilizzare un LLM di capacità superiore come base di confronto;
+        \item specificare la risposta assieme alla domanda, mettendola a confronto con la risposta ottenuta;
+        \item utilizzare metodi classici per il confronto (es. algoritmi che gestiscono risposte in formati strutturati).
     \end{itemize}
     I requisiti obbligatori per il \textbf{Proof of Concept} includono la creazione del sistema di verifica sulla API esterna (LLM),
     ritornando un set di risposte su cui proseguire con gli algoritmi e/o sottoprogrammi di test da cui verranno
     stabiliti i parametri di efficacia del modello AI. Successivamente al PoC, verrà creata un'applicazione
     che riceve e archivia una lista di domande e risposte (ordine di grandezza sulle centinaia), la quale viene
     poi elaborata sul sistema di test.
-    I risultati sono infine catalogati e presentati tramite interfaccia utente. Opzionalmente è possibile progettare una soluzione al problema dei test in maniera completamente autonoma,
+    I risultati sono infine catalogati e presentati tramite interfaccia utente. Opzionalmente, è possibile progettare una soluzione al problema dei test in maniera completamente autonoma,
     oltre a richieste aggiuntive verso il prodotto finale.\\
     La consegna finale deve prevedere:
     \begin{itemize}
-        \item Codice sorgente prodotto su sistemi di versionamento come \textbf{GitHub};
-        \item Documentazione minima (come dettato dal corso), manuale per l'utilizzo e documentazione per sviluppatori
-        \item Favorimento dell'\textbf{estensibilità e manutenzione} da terze parti.
+        \item codice sorgente prodotto su sistemi di versionamento come \textbf{GitHub};
+        \item documentazione minima (come dettato dal corso), manuale per l'utilizzo e documentazione per sviluppatori;
+        \item di consentire \textbf{estensibilità e manutenzione} da terze parti.
     \end{itemize}
     
     \subsection{Tecnologie previste}
@@ -77,33 +77,33 @@
     \newpage
     \section{Capitolato C8 - Requirement Tracker}
     \subsection{Informazioni del progetto}
-    \textbf{Bluewind s.r.l.} propone un sistema di \textbf{automatizzazione per il tracciamento
+    \textbf{Bluewind S.r.l.} propone un sistema di \textbf{automatizzazione per il tracciamento
     di requisiti} direttamente sul codice sorgente tramite un LLM. Nel particolare, il sistema dovrà essere
     implementato in un Plug-in di \textbf{Visual Studio Code}, con lo scopo di migliorare la qualità
     dell'implementazione.\\
     In sintesi, l'azienda ricerca le seguenti proprietà del plug-in:
     \begin{itemize}
-        \item Tracciabilità dei requisiti, analizzando il codice C/C++ per verificare come i requisiti vengono implementati per ridurre i casi di verifica manuale.
-        \item Il modello AI integrato dovrà essere capace di sintetizzare e rendere i requisiti più chiari al programmatore.
-        \item Modularità dell'architettura per garantire l'aggiunta di nuove funzionalità a posteriori senza dover modificare il codice di base.
+        \item tracciabilità dei requisiti, analizzando il codice C/C++ per verificare come i requisiti vengono implementati per ridurre i casi di verifica manuale;
+        \item il modello AI integrato dovrà essere capace di sintetizzare e rendere i requisiti più chiari al programmatore;
+        \item modularità dell'architettura per garantire l'aggiunta di nuove funzionalità a posteriori, senza dover modificare il codice di base.
     \end{itemize}
     Il \textbf{Proof of Concept} deve dimostrare la fattibilità delle proprietà sovracitate, rispetto alle scelte tecnologiche e di design,
     insieme a diagrammi UML che descrivono rispettivamente i casi d'uso e l'architettura.\\
     Nella fase successiva (\textbf{Minimum Viable Product}) saranno necessari:
     \begin{itemize}
-        \item Interfaccia grafica integrata direttamente su VSCode;
-        \item La possibilità di navigare e filtrare i risultati su diversi parametri;
-        \item Il modello deve essere capace di riscrivere i requisiti in base alle best practice di scrittura tecnica;
-        \item Copertura di test superiore all'80\%;
-        \item Documentazione tecnica delle funzionalità;
-        \item Manuale d'uso per l'utente finale.
+        \item interfaccia grafica integrata direttamente su VSCode;
+        \item possibilità di navigare e filtrare i risultati su diversi parametri;
+        \item modello capace di riscrivere i requisiti in base alle best practice di scrittura tecnica;
+        \item copertura di test superiore all'80\%;
+        \item documentazione tecnica delle funzionalità;
+        \item manuale d'uso per l'utente finale.
     \end{itemize}
     Infine vi sono alcuni requisiti opzionali per raggiungere il prodotto finale, per esempio il supporto a diversi linguaggi.
     
     \subsection{Tecnologie previste}
     Dati i requisiti, il progetto richiede l'uso delle \textbf{VSCode Extension API} insieme alle \textbf{API REST} per la connessione
-    ai modelli AI. Sono inoltre consigliati dall'azienda \textbf{Python o Node.js} per l'integrazione del modello, uno o più LLM pre-addestrati (es. \textbf{GPT}),
-    e alternativamente Ollama per l'uso di LLM locale.
+    ai modelli AI. Sono inoltre consigliati dall'azienda \textbf{Python o Node.js} per l'integrazione del modello composto da uno o più LLM pre-addestrati (es. \textbf{GPT})
+    o, alternativamente, Ollama per l'uso di LLM locale.
     
     \subsection{Vantaggi e Svantaggi}
     \textbf{Vantaggi:}
@@ -115,13 +115,13 @@
     \textbf{Svantaggi:}
     \begin{itemize}
         \item Possibili difficoltà nel rendere il progetto modulare e aperto all'estensibilità;
-        \item La dipendenza da tecnologie molto specifiche potrebbe essere difficile da gestirne l'apprendimento come gruppo.
+        \item Dipendenza da tecnologie molto specifiche potrebbe essere difficile da gestirne l'apprendimento come gruppo.
     \end{itemize}
 
 
     \section{Capitolato C7 - LLM: Assistente Virtuale}
     \subsection{Informazioni del progetto}
-    Questo progetto di \textbf{Ergon Informatica Srl} riguarda la creazione di un \textbf{assistente virtuale}
+    Questo progetto di \textbf{Ergon Informatica S.r.l} riguarda la creazione di un \textbf{assistente virtuale}
     per aziende che vendono prodotti e ricevono ordini multiprodotto dai clienti.
     Specificatamente, l'obiettivo dell'assistente virtuale è facilitare l'accesso alle informazioni
     sui prodotti disponibili, tramite predizioni della domanda e analisi della profilazione
@@ -129,18 +129,18 @@
     Non vengono presentati Proof of Concept e Minimum Viable Product particolari, ma sono comunque descritte
     le richieste obbligatorie, con particolare attenzione all'implementazione suddivisa in moduli che comunicano tra di loro:
     \begin{itemize}
-        \item Database relazionale per gestire i dati che verranno usati dal modello AI per l'apprendimento;
+        \item database relazionale per gestire i dati che verranno usati dal modello AI per l'apprendimento;
         \item Web Server che riceve i dati, li suddivide in blocchi vettoriali (\textbf{Embedding Model}) e li archivia;
-        \item Interfaccia utente mobile che invia le domande (tramite API REST) e ritorna una risposta generata dal sistema LLM, utilizzando il database vettoriale;
-        \item Documentazione minima, che include la progettazione, schema del database, implementazione del sistema;
-        \item Codice sorgente disponibile in una repository pubblica.
+        \item interfaccia utente mobile che invia le domande (tramite API REST) e ritorna una risposta generata dal sistema LLM, utilizzando il database vettoriale;
+        \item documentazione minima, che include la progettazione, schema del database e implementazione del sistema;
+        \item codice sorgente disponibile in una repository pubblica.
     \end{itemize}
     
     \subsection{Tecnologie previste}
     Non vi sono richieste tecnologiche strettamente necessarie, tuttavia sono raccomandati diversi sistemi per ogni modulo:
     \begin{itemize}
         \item \textbf{Database} con SQL Server Express, MySQL o MariaDB;
-        \item Larga scelta di \textbf{LLM}, come BLOOM, Falcon IA e Pythia;
+        \item larga scelta di \textbf{LLM}, come BLOOM, Falcon IA e Pythia;
         \item \textbf{API REST} per l'interazione tra LLM e applicazione;
         \item \textbf{Interfaccia utente} su applicazione mobile, con .NET, MAUI o Android;
         \item \textbf{Back-end} web per l'applicazione mobile.
@@ -151,14 +151,14 @@
     \begin{itemize}
         \item Idea del progetto chiara e intuibile;
         \item Casi di studio per i test offerti direttamente dall'azienda;
-        \item Utilizzo di diverse tecnologie specifiche, utile al gruppo per imparare conoscenze nuove;
+        \item Utilizzo di diverse tecnologie specifiche, utile al gruppo per acquisire conoscenze nuove;
         \item Supporto dal team di R\&D dell'azienda a richiesta;
         \item Incoraggiamento a pubblicare il codice sorgente.
     \end{itemize}
     \textbf{Svantaggi:}
     \begin{itemize}
         \item L'implementazione potrebbe essere troppo avanzata, poiché vi sono diversi moduli che interagiscono reciprocamente;
-        \item Oggetto di interesse potrebbe essere all'apparenza banale;
+        \item L'oggetto di interesse potrebbe essere all'apparenza banale;
         \item Alcune tecnologie e framework (come .NET) richiederebbero molto tempo dedicato al loro studio.
     \end{itemize}
     
@@ -166,30 +166,30 @@
     \section{Altri capitolati}
     \subsection{Capitolato C2 - Vimar GENIALE}
     Il progetto prevede un'applicazione web responsive che implementa un modello AI come
-    assistente virtuale sulla ricerca di informazioni dei prodotti Vimar, con infrastruttura cloud.\\
+    assistente virtuale per la ricerca di informazioni dei prodotti Vimar, con infrastruttura cloud.\\
     Il capitolato non è stato considerato dal gruppo per mancato interesse.
     
     \subsection{Capitolato C3 - Automatizzare le routine digitali}
     Il sistema proposto dall'azienda deve implementare un cloud di AI generativa integrato con software locali
     per automatizzare attività quotidiane, in un'applicazione user-friendly su Windows e/o Mac.\\
-    Il gruppo ha deciso di scartare il capitolato dato lo scarso interesse della proposizione.
+    Il gruppo ha deciso di scartare il capitolato dato lo scarso interesse della proposta.
     
     \subsection{Capitolato C4 - NearYou}
     NearYou ha lo scopo di impostare una piattaforma di pubblicità basata su modelli AI e geolocalizzazione,
-    per generare annunci adatti al contesto in tempo reale; specificatamente sono richiesti simulatori di dati GPS,
+    per generare annunci adatti al contesto in tempo reale. Nello specifico sono richiesti simulatori di dati GPS,
     sistemi di gestione delle informazioni e l'implementazione di tecnologie per la personalizzazione dinamica.\\
     Nonostante ci fosse un interesse iniziale sul capitolato, è stato deciso di non scegliere NearYou poiché ritenuto potenzialmente
     troppo complesso da gestire.
     
     \subsection{Capitolato C5 - 3Dataviz}
     3Dataviz richiede lo sviluppo di un'interfaccia web interattiva per la visualizzazione di dati su piccola e larga scala con istogrammi tridimensionali,
-    interamente basato su framework e librerie web (three.js, Angular, React).\\
+    interamente basata su framework e librerie web (Three.js, Angular, React).\\
     Dopo una discussione a riguardo, il gruppo ha concluso che 3Dataviz ha un ambito troppo ridotto per un progetto
     sviluppato da sette persone.
     
     \subsection{Capitolato C6 - Sistema di gestione di un magazzino distribuito}
     L'architettura del progetto prevede un sistema di microservizi, che ottimizzano e gestiscono magazzini, in particolar
-    modo sincronizzando i dati, perfezionando i livelli di inventario, e prevedendo
+    modo sincronizzando i dati, perfezionando i livelli di inventario e prevedendo
     il riassortimento tramite Machine Learning, allo scopo di garantire un flusso costante di materiali tra magazzini.\\
     Il progetto è stato scartato per scarso interesse da parte del gruppo.
     
@@ -197,7 +197,7 @@
     L'obiettivo di BuddyBot è migliorare la produttività dei team di sviluppo, centralizzando tutte le fonti di
     conoscenza interna aziendali (GitHub, Jira, Confluence, ecc.) in un assistente virtuale con LLM su interfaccia utente web.\\
     Inizialmente questo progetto era molto gettonato nel gruppo, tuttavia dopo un'attenta valutazione si è giunti alla conclusione
-    che il gruppo non è abbastanza confidente nell'intraprendere questo capitolato.
+    che il gruppo non è abbastanza convinto nell'intraprendere questo capitolato.
     
     \newpage
     \section{Scelta finale}
@@ -205,7 +205,7 @@
     ci impegneremo al progetto \textbf{Artificial QI}. Il punto di forza più accattivante è la libertà
     nella selezione delle tecnologie da applicare al progetto, poiché rispecchierebbe l'intensità di lavoro che siamo
     disposti a dedicare, considerando che ogni membro del gruppo dovrà imparare diversi aspetti delle tecnologie adoperate.
-    Ovviamente ci è sembrato interessante anche l'oggetto di studio del capitolato, cioè la valutazione
+    Ovviamente, ci è sembrato interessante anche l'oggetto di studio del capitolato, cioè la valutazione
     di diversi LLM con una serie di approcci, pensati dall'azienda proponente, oppure possibilmente da noi in fase di design.
 
     \input{version.tex}
