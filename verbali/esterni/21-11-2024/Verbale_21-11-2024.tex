@@ -7,7 +7,6 @@
 \usepackage{multirow}
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
-\usepackage[italian]{babel}
 
 % l'header potrebbe avere altezza inconsistente tra pagine
 \setlength{\headheight}{40.5633pt}
@@ -29,7 +28,9 @@
     \lhead{\includegraphics[width=2cm]{logo.png}}
     \rhead{\titolo}
     \headsep = 15mm
-
+    % versionamento
+    \input{version.tex} 
+    \newpage
     % indice
     \renewcommand{\contentsname}{Indice}
     \tableofcontents
@@ -77,8 +78,7 @@
     \newpage
     \newpage
 
-    % versionamento
-    \input{version.tex} 
+
 
 
 \end{document}
