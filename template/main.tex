@@ -21,13 +21,15 @@
 \begin{document}
     % titolo
     \input{title.tex}
-
+    
     % header di pagina 
     \pagestyle{fancy}
     \lhead{\includegraphics[width=2cm]{logo.png}}
     \rhead{\titolo}
     \headsep = 15mm
-
+    % versionamento
+    \input{version.tex}
+    \newpage
     % indice
     \renewcommand{\contentsname}{Indice}
     \tableofcontents
@@ -41,6 +43,5 @@
     \newpage
     % inserisci corpo
 
-    % versionamento
-    \input{version.tex} 
+     
 \end{document}
