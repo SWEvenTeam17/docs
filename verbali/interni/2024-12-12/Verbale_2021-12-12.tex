@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {Verbale 2024-12-12}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Sesto incontro interno}
+\def \azienda {}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+    \newpage
+    % inserisci corpo
+
+    \section{Ordine del giorno}
+    \subsection{Casi d'uso}
+    È stata completata una revisione generale di tutti i casi d’uso emersi finora in preparazione all’invio all’azienda per un primo feedback.
+    È stata discussa, inoltre, la natura degli LLM nel sistema, in particolare se considerare tali LLM come elementi interni o esterni ad esso. Nel software che il gruppo andrà a sviluppare ci sarà la possibilità di attivare o disattivare un LLM, tuttavia, gli LLM sono sviluppati da terze parti e questo li qualifica come attori esterni.
+    In base a questa considerazione, alcuni casi d’uso potrebbero richiedere modifiche o ridefinizioni, ma il tutto sarà oggetto di confronto nel prossimo incontro con l’azienda.    
+    \subsection{Discussione e analisi del POC}
+    Il focus principale del POC è dimostrare di saper utilizzare le tecnologie richieste attraverso un prototipo essenziale e una documentazione breve.
+    Dunque, si è deciso di ridurre al minimo il back-end e il front-end, omettendo ad esempio il sistema di login, che potrà essere introdotto, se necessario, in una fase successiva.
+    Con queste premesse, il POC dovrà concentrarsi sulla valutazione delle risposte del modello linguistico (LLM), con interrogazione e confronto rispetto a risposte attese.
+    \subsection{Inizio stesura del codice}
+    Per il prototipo iniziale, si utilizzerà Django per implementare un back-end che restituisca delle API, mentre React per gestire la parte di front-end. Il primo passo sarà la creazione di uno scheletro come ad esempio un programma in cui l’utente potrà inserire una domanda e una risposta attesa. Una volta definita questa struttura base, si potrà configurare un Docker per la gestione delle dipendenze.
+    \subsection{Norme di progetto e documentazione}
+    È stato fatto il punto sullo stato attuale delle Norme di Progetto e del Glossario, con alcune revisioni apportate. Si è poi discusso sulla stesura del Piano di Progetto e del Piano di Qualifica.
+    
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Discutere con l'azienda proponente i casi d'uso realizzati finora
+        \item Iniziare la stesura del "Piano di Progetto" e del "Piano di Qualifica"
+        \item Avviare concretamente lo sviluppo del POC con la realizzazione di primi prototipi e test preliminari del codice
+    \end{itemize}
+
+
+
+     
+\end{document}
