@@ -1,0 +1,81 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE ESTERNO 2024-12-19}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Incontro con Zucchetti S.p.A.}
+\def \azienda {Zucchetti S.p.A.}
+
+\begin{document}
+    \sloppy
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex} 
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni incontro
+    \input{info.tex}
+    
+    % firma
+    \input{signature.tex}
+    \newpage
+
+    % main
+    \section{Resoconto dell'incontro}
+    A seguito dell’ultimo incontro interno, il gruppo ha contattato l’azienda Zucchetti S.p.A. con l’obiettivo di discutere sui casi d’uso realizzati per ottenere un primo feedback su quanto svolto finora e per porre loro alcune domande utili per il proseguimento del progetto e lo sviluppo del Proof of Concept.
+
+
+    \subsection{Quesito 1 - Revisione dei casi d'uso}
+    Durante la visione dei casi d’uso con l’azienda proponente sono emersi dubbi su alcuni di essi, in particolare è emersa la necessità di rivedere i casi d’uso riguardanti gli errori riferiti al caso d’uso U.C.2. Si potrebbe, ad esempio, utilizzare meccanismi come gli "INCLUDE", per rendere il caso d’uso più articolato e comprensibile.
+    Perciò, è stato suggerito di confrontarsi con il professor Cardin per stabilire se tali sottocasi appartenessero allo stesso scenario e quindi apportare tali modifiche.  
+
+    \subsection{Quesito 2 - Definizione dei termini}
+    Zucchetti ha consigliato di definire meglio i termini all’interno dei casi d’uso, al fine di evitare interpretazioni errate. Ad esempio, nel progetto ricorre facilmente il termine ‘risposta’ che si differenzia in quella ‘attesa’ da quella ‘ottenuta’. Il suggerimento fornito dall’azienda è stato di differenziare tale termine con ‘risposta’ per indicare la risposta attesa scritta dall’utente e ‘risultato’ per rappresentare la risposta effettiva generata dal sistema. Ovviamente, la scelta che adotterà il gruppo verrà discussa e successivamente riportata nel Glossario.
+
+    \subsection{Quesito 3 - Parsing delle risposte}
+    È stata approvata l’idea che il programma esegua il parsing per riconoscere JSON o il linguaggio naturale. L’azienda ha esposto, poi, un esempio interessante relativo al parsing delle risposte, ovvero se l’output richiesto è in formato JSON ma viene restituito con del testo aggiuntivo sopra e sotto, il sistema di parsing dovrebbe riconoscere questa situazione e trattare il contenuto in modo adeguato.
+
+    \subsection{Quesito 4 - Identificazione delle risposte}
+    Le risposte e i risultati generati dal sistema verranno salvati in un database per garantire tracciabilità e consultazione futura. Perciò, per facilitare la ricerca di tali risposte è fondamentale stabilire un sistema per identificare chiaramente ogni risposta e ogni sessione di test. L’azienda ha proposto di utilizzare un'impostazione tabellare con un identificativo basato su data e ora della sessione, come una cronologia, per distinguere facilmente i risultati a seconda del LLM utilizzato. Questa pratica, nonostante sia opzionale, favorirebbe un confronto tra LLM più fruibile.
+
+    \subsection{Quesito 5 - Sviluppo del Proof of Concept (POC)}
+    Per lo sviluppo del POC, l’azienda non è interessata ad un sistema di autenticazione per l’utente ma preferisce che il gruppo si concentri sul problema del confronto delle risposte, in particolare è interessata al confronto tra le varie run del sistema. Tuttavia, l’azienda si offre di spiegare di persona come svolgere la parte di login in modo rapido per fornire al gruppo una visione d’insieme più completa, anche a scopo istruttivo.
+    In seguito, dopo una breve spiegazione del POC che il gruppo vorrebbe realizzare, ovvero un mini sistema che interroghi una sola LLM e generi dei risultati, l’azienda ha chiarito i criteri di confronto di tali risultati. Ad esempio, tramite l'utilizzo di LLM esterni oppure tramite un vettore di embedding. 
+
+
+    \newpage
+    
+    \section{Conclusioni}
+    Grazie al dialogo, l’azienda ha fornito nuovi punti di vista che il gruppo non aveva considerato, arricchendo il nostro approccio al POC e portando a rivalutare alcuni aspetti critici con maggiore consapevolezza.
+    Dopo aver quindi ricevuto un primo feedback sui casi d’uso, il gruppo proseguirà il lavoro con maggiore determinazione, continuando ad affinare le idee già elaborate.
+
+    \newpage
+    \newpage
+
+
+
+
+\end{document}
