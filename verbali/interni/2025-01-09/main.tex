@@ -1,0 +1,71 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE 2025-01-09}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Settimo incontro }
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+    \newpage
+
+    \section{Ordine del giorno}
+    \subsection{Resoconto sulle attività svolte}
+    È stato fatto un resoconto sulle attività svolte nell'ultimo periodo. Ci siamo concentrati sul codice
+    scritto, lasciando presentare ai programmatori quanto svolto. Abbiamo poi visto i risultati 
+    di quanto scritto e le funzionalità attualmente implementate. Il gruppo è soddisfatto del codice sviluppato fino a questo momento ed è pronto a continuare a lavorare 
+    sul POC.
+    Abbiamo in seguito fatto un resoconto della documentazione scritta fino ad adesso, valutando che devono essere 
+    svolte alcune piccole correzioni su parti già svolte. Inoltre abbiamo considerato il bisogno di una lieve accelerazione per quanto riguarda il 
+    processo di scrittura della documentazione.
+    \subsection{Assegnazione issues}
+    Dato il problema riscontrato con la documentazione abbiamo deciso di aprire tempestivamente delle issues 
+    che vadano a risolvere i problemi sollevati oltre che incentivare il processo di scrittura della documentazione.
+    \subsection{Casi d'uso}
+    Data l'approvazione dei casi d'uso da parte dell'azienda, abbiamo discusso della futura formalizzazione dei casi
+    d'uso sviluppati, che punta a ricercare uno stile più formale e completo. Abbiamo quindi pensato ai prossimi passi da svolgere, tra cui
+    la realizzazione di diagrammi dei casi d'uso.
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Continuare lo sviluppo del POC
+        \item Sistemare la documentazione già scritta e continuare la scrittura dei documenti
+        \item Rifinire e formalizzare i casi d'uso
+    \end{itemize}
+
+    % firma, solo per verbali esterni
+   % \input{signature.tex}
+    %\newpage
+    % inserisci corpo
+
+     
+\end{document}
