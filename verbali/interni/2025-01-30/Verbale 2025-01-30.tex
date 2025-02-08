@@ -1,0 +1,64 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE 2025-01-30}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Ottavo incontro }
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+    \newpage
+
+    \section{Ordine del giorno}
+    \subsection{Resoconto sulle attività svolte}
+    È stato fatto un resoconto delle attività svolte, sono stati controllati i progressi nello sviluppo del Proof Of Concept e nella stesura della documentazione.
+    \subsubsection{Proof Of Concept}
+    Il lavoro svolto è stato presentato dai due programmatori, il lavoro svolto è stato soddisfacente seppur rallentato dalla preparazione degli esami che ciascun programmatore ha dovuto o dovrà svolgere.
+    È stato deciso di fissare prossimamente un colloquio con il Proponente Zucchetti per discutere sulla creazione di un container Docker per l'applicativo e per mostrare lo stato di sviluppo del POC.
+    \subsubsection{Documentazione}
+    Il lavoro sulla documentazione è proseguito nonostante alcuni rallentamenti dovuti agli esami che ciascun membro del gruppo deve o dovrà svolgere.
+    \subsection{Assegnazione issues}
+    Sono state aperte le issues corrispondenti per la creazione del container e per il proseguimento della documentazione.
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Continuare lo sviluppo del POC
+        \item Sistemare la documentazione già scritta e continuare la scrittura dei documenti
+    \end{itemize}
+
+    % firma, solo per verbali esterni
+   % \input{signature.tex}
+    %\newpage
+    % inserisci corpo
+
+     
+\end{document}
