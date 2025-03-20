@@ -1,0 +1,74 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE ESTERNO 2025-03-06}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Incontro con Zucchetti S.p.A.}
+\def \azienda {Zucchetti S.p.A.}
+
+\begin{document}
+    \sloppy
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex} 
+    \newpage
+    % indice
+    \renewcommand{\contentsname} {Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni incontro
+    \input{info.tex}
+    
+    % firma
+    \input{signature.tex}
+    \newpage
+
+    % main
+    \section{Resoconto dell'incontro}
+    A seguito di alcune modifiche apportate al Proof of Concept, il gruppo ha deciso di fare un colloquio con l'azienda proponente per un'ultima revisione prima della RTB.
+
+    \subsection{Quesito 1 - Modifiche al PoC}
+    Sono state riportate le nuove modifiche al Proof of Concept tra cui l'aggiunta di più modelli LLM come DeepSeek e la visualizzazione storica dei set di domande/risposte delle sessioni. 
+    Inoltre è stato migliorato il confronto semantico, calibrando meglio la percentuale di accettazione della risposta data attraverso il confronto di substring.
+
+    \subsection{Quesito 2 - Visualizzazione dei risultati}
+    L'azienda ha fatto notare al team che la visualizzazione delle risposte, fornite dai LLM, fosse chiara e semplice nel contesto di un piccolo set di domande ma risultasse troppo densa per la lettura di una grande quantità di domande.
+    Perciò è stato suggerito l'uso di grafici, per permettere una lettura visivamente più facile da comprendere, magari anche attraverso l'utilizzo di colori semaforici per indicare la positività di una risposta.
+    Una visualizzazione chiara dei risultati è una componente chiave dell'applicazione che stiamo sviluppando, soprattutto quando il numero di domande inizia a superare le centinaia, perciò è indispensabile che i risultati siano presentati in una forma più fruibile.
+
+    \subsection{Quesito 3 - MVP}
+    Dopo aver ricevuto una risposta affermativa in merito all'idoneità e conformità del Proof of Concept, il gruppo si chiedeva se ci fossero elementi validi per l'MVP.
+    Secondo Zucchetti gran parte del PoC può essere ampiamente utilizzato per l'MVP ma va migliorato l'output dei risultati.
+
+    %\newpage
+    
+    \section{Conclusioni}
+    I risultati del Proof of Concept hanno soddisfatto le aspettative dell'azienda, quindi il gruppo procederà con il progetto preparandosi alla RTB.
+    
+    \newpage
+    \newpage
+
+
+
+
+\end{document}
