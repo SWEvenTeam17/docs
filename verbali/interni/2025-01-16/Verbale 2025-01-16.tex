@@ -1,0 +1,62 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE 2025-01-16}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Decimo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+    \newpage
+
+    \section{Ordine del giorno}
+    L'ordine del giorno è il seguente:
+    \begin{itemize}
+        \item Stato del documento Analisi dei Requisiti
+        \item Stato del documento Piano di Qualifica
+        \item Stato del documento Norme di Progetto
+        \item Stato di sviluppo del PoC 
+        \item Problematiche riscontrate internamente al gruppo
+    \end{itemize}
+
+    \section{Progressi nella stesura della documentazione}
+    Il gruppo ha revisionato lo stato dei documenti Analisi dei Requisiti, Piano di Qualifica e Norme di Progetto, sono stati trovati alcuni errori
+    nella loro stesura.
+    Il documento Analisi dei Requisiti è stato ampliato con nuovi casi d'uso.
+    \section{Stato di sviluppo del PoC}
+    Il PoC ha subito una regolare evoluzione rispetto al periodo precedente, in particolare è stata implementata con successo l'integrazione dei LLM.
+    \section{Problemi interni al gruppo}
+    Il gruppo ha riscontrato un rallentamento dovuto alla scarsa collaborazione di un membro.
+    \section{Decisioni prese}
+    Il gruppo ha deciso di aumentare l'intensità di lavoro per compensare il rallentamento riscontrato.     
+\end{document}

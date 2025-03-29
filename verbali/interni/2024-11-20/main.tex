@@ -1,0 +1,66 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bookmark} % Add this line
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {Verbale 2024-11-20}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Quinto incontro interno}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+
+    % firma, solo per verbali esterni
+   % \input{signature.tex}
+    \newpage
+    % inserisci corpo
+    \section{Ordine del giorno}
+    \subsection{Norme di progetto e glossario}
+    Valutata la struttura delle Norme di progetto risulta ora possibile continuare la redazione delle Norme del Progetto per poter trasferire in maniera ordinata le regole di lavoro.
+ Risulta necessario inoltre iniziare a redigere il Glossario dato che iniziano a presentarsi termini specifici del progetto.
+    
+    
+    \subsection{Piano di Progetto}
+    Con l’inizio del nuovo periodo è chiaro che serva dotarsi di una struttura del Piano di Progetto, in modo da assicurarsi di raccogliere tutti i dati necessari per redigere il documento.
+
+    \subsection{LLM da utilizzare}
+    
+Si è discusso sui LLM da usare all’interno del PoC. Viene avviata una fase di ricerca dei possibili LLM da utilizzare all’interno del progetto tenendo conto delle richieste del proponente, quindi cercare dei modelli che siano piccoli ma che siano in grado di fornire delle risposte sufficientemente complete. 
+
+    
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Continuare redazione Norme di Progetto;
+        \item Redazione Glossario;
+        \item Definire struttura Piano di Progetto;
+        \item Ricerca LLM.
+    \end{itemize}     
+\end{document}
