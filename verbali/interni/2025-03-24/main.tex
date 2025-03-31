@@ -1,0 +1,57 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE 2025-03-24}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Quindicesimo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+
+    \newpage
+
+    \section{Ordine del giorno}
+    \subsection{Stato del Progetto}
+    È stato analizzato lo stato dei documenti: Norme di Progetto, Analisi dei Requisiti, Piano di Qualifica e Glossario sono terminati e approvati. Il Piano di Progetto, per quel che riguarda la retrospettiva del periodo appena concluso, verrà completato il giorno seguente a questa riunione.
+    Il PoC è stato ultimato e approvato dal proponente. Il gruppo è pronto per candidarsi alla RTB.
+
+
+    \section{Decisioni prese}
+    \begin{itemize}
+        \item Inviare candidatura RTB;
+        \item Dividere la presentazione tra i componenti;
+        \item Concludere il Piano di Progetto.
+        
+    \end{itemize}
+
+\end{document}
