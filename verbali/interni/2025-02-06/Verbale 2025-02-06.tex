@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE 2025-02-06}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Dodicesimo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+    \newpage
+
+    \section{Ordine del giorno}
+    \subsection{Resoconto sulle attività svolte}
+    È stato fatto un resoconto delle attività svolte durante il precedente sprint.
+    \subsubsection{Proof of Concept}
+    Lo sviluppo del Proof of Concept è proseguito ed il gruppo si ritiene soddisfatto dei progressi e dello stato di fatto.
+    È stato fissato un colloquio con l'azienda proponente Zucchetti per discutere dello sviluppo e chiarire alcuni dubbi.
+    Tale colloquio avrà luogo in data 2025-02-07.
+    \subsubsection{Documentazione}
+    Lo stato dello sviluppo della documentazione risulta essere proseguito seppur con qualche rallentamento.
+    Il gruppo cercherà pertanto di velocizzare la scrittura dei documenti necessari.
+    \subsection{Problemi interni al gruppo}
+    Verrà programmato un colloquio con il Prof. Vardanega per discutere della mancata partecipazione di un membro del gruppo. Tale colloquio non ha ancora una data definita, il gruppo discuterà internamente le problematiche presenti e cercherà di trovare la soluzione migliore
+    per tutti.
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Continuare lo sviluppo del PoC
+        \item Sistemare la documentazione già scritta e continuare la scrittura dei documenti
+    \end{itemize}
+
+    % firma, solo per verbali esterni
+   % \input{signature.tex}
+    %\newpage
+    % inserisci corpo
+
+     
+\end{document}
