@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE 2025-02-27}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Quattordicesimo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+
+    \newpage
+
+    \section{Ordine del giorno}
+    \subsection{Conclusione del PoC e verifica container}
+    Il gruppo ha confermato la conclusione del PoC e la verifica del container per
+    l'applicazione: sono stati identificati alcuni problemi su diverse macchine, i quali sono stati risolti.
+
+    \subsection{Progressi nella documentazione}
+    La stesura di maggior parte dei documenti si è conclusa, ad eccezione del Piano di Qualifica,
+    attualmente in fase conclusiva. Contemporaneamente sono iniziate le attività di verifica dei documenti,
+    e la loro conversione su LaTeX. 
+
+    \section{Decisioni prese}
+    Dati gli impegni personali di gran parte del gruppo, la durata del prossimo periodo, che precede i colloqui RTB,
+    è stata pianificata a tre settimane. Durante questo periodo sono previste le seguenti attività:
+    \begin{itemize}
+        \item Fissare un colloquio con l'azienda proponente per l'approvazione del PoC
+        \item Preparare le presentazioni per l'RTB
+        \item Ultimare il Glossario su pagina web
+        \item Concludere la stesura e verifica dei documenti
+    \end{itemize}
+
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {Verbale 2025-02-14}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Tredicesimo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+
+    % firma, solo per verbali esterni
+   % \input{signature.tex}
+    \newpage
+    % inserisci corpo
+    \section{Ordine del giorno}
+    \subsection{Stato documentazione}
+    L’attività di revisione della documentazione ha permesso la conclusione delle Norme di Progetto oltre che un avanzamento dei restanti documenti. 
+    
+    Per quel che riguarda l’Analisi dei Requisiti è stata svolta l’operazione di formalizzazione e tracciamento dei requisiti. Viene prevista quindi un’attività di revisione e completamento di tale documento. 
+    
+    Nel Piano di Qualifica si stabilisce di aggiungere la sezione del Cruscotto di controllo della qualità, andando ad inserire le misurazioni già effettuate.
+
+    
+    \subsection{Stato PoC}
+    Sono state mostrate le nuove funzionalità e le migliorie del PoC. L’incontro con l’azienda è stato positivo: sono stati forniti dei suggerimenti per migliorare il modello. Viene deciso di implementare lato front end le nuove funzionalità. 
+
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Terminare Glossario;
+        \item Continuare Analisi dei Requisiti e Piano di Qualifica;
+        \item Aggiungere funzionalità PoC, migliorare container, eseguire test di compatibilità.
+    \end{itemize}     
+\end{document}

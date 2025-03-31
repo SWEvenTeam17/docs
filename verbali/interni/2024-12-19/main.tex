@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {Verbale 2024-12-19}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Ottavo incontro interno}
+\def \azienda {NOME AZIENDA}
+
+\begin{document}
+    % titolo
+    \input{title.tex}
+    
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex}
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni dell'incontro, solo per verbali
+    \input{info.tex}
+
+    % firma, solo per verbali esterni
+   % \input{signature.tex}
+    \newpage
+    % inserisci corpo
+    \section{Ordine del giorno}
+    \subsection{Avanzamento lavori}
+    È stato discusso lo stato di avanzamento dei lavori dell’ultima settimana e stabilito come gestire le prossime settimane alla luce delle vacanze di Natale. Viene deciso di organizzare la prossima riunione alla fine di queste.
+
+    
+    \subsection{Casi d'uso}
+    Sono stati rivisti i casi d’uso in vista dell’incontro con il proponente. 
+
+    \subsection{Stato documentazione}
+    È stato valutato lo stato di avanzamento della documentazione.
+    Essendo definita la struttura dell’Analisi dei Requisiti viene deciso di iniziare la redazione di quest’ultimo documento tenendo conto del riscontro che verrà fornito nell’incontro.
+    Viene inoltre deciso di definire la struttura del Piano di Qualifica.
+    \subsection{PoC}
+    Sono stati osservati i primi prototipi e interfacce del PoC. Grazie alla discussione sui casi d’uso ci si concentrerà nella creazione delle sessioni e gestione delle risposte.
+
+    \section{Attività da svolgere}
+    \begin{itemize}
+        \item Iniziare redazione Analisi dei Requisiti;
+        \item Migliorare casi d’uso;
+        \item Definire struttura Piano di Qualifica;
+        \item Creare sessioni e gestione delle risposte.
+    \end{itemize}     
+\end{document}
