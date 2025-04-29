@@ -1,0 +1,86 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE ESTERNO 2025-04-29}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Incontro con Zucchetti S.p.A.}
+\def \azienda {Zucchetti S.p.A.}
+
+\begin{document}
+    \sloppy
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex} 
+    \newpage
+    % indice
+    \renewcommand{\contentsname} {Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni incontro
+    \input{info.tex}
+    
+    % firma
+    \input{signature.tex}
+    \newpage
+
+    % main
+    \section{Resoconto dell'incontro}
+In seguito al superamento della RTB, il gruppo ha deciso di richiedere un incontro con l'azienda per discutere 
+alcuni aspetti tecnici del progetto e definire gli ultimi requisiti per la PB.
+
+\subsection{Quesito 1 - Programma esterno}
+All'interno del capitolato, il requisito obbligatorio numero due richiede la presenza di un programma esterno a cui vengano poste delle domande tramite API e che registri le risposte.  
+Il gruppo ha pensato, anche dopo averne discusso con il Professor Cardin, di progettare due backend separati: uno che gestisca il prodotto e uno che gestisca il programma esterno esponendo le API.  
+Questa soluzione è stata presentata all'azienda, che l'ha approvata, suggerendo di implementare un backend molto semplice per il programma esterno, ribadendo che la parte più importante del prodotto è quella relativa alla valutazione delle risposte.  
+Il backend dell'applicazione avrà una struttura a layer, dettaglio anch'esso approvato dall'azienda.  
+L'azienda ha inoltre chiarito che gli endpoint potranno rimanere esposti anche in fase di deploy.
+
+\subsection{Quesito 2 - Visualizzazione dei risultati}
+È stata ribadita la metodologia prevista per la visualizzazione dei risultati, che consiste nell'utilizzo di grafici e colori per evidenziare quante domande abbiano ricevuto una valutazione alta, media o bassa.  
+Tale approccio era già stato precedentemente discusso e pianificato con l'azienda; in questo incontro sono stati chiariti gli ultimi dettagli.
+
+\subsection{Quesito 3 - Confronto dei risultati}
+Il confronto dei risultati richiesto dall'azienda riguarda run di test simili tra loro.  
+Ad esempio, può risultare utile nei casi in cui venga eseguito un test, si annotino le domande che hanno ottenuto una buona valutazione e quelle che non l'hanno ottenuta, si apportino modifiche al LLM di test e si riesegua il test per verificare miglioramenti o peggioramenti.  
+Il confronto richiesto, quindi, riguarda run con set di domande pressoché identici, non differenti.  
+Sarà compito del gruppo gestire i casi in cui venga avviato un confronto tra set di domande diversi.  
+Il confronto consisterà essenzialmente nel visualizzare i risultati sintetici di due (o eventualmente più, a discrezione del gruppo) run di test affiancati.
+
+\subsection{Quesito 4 - OpenAPI 3.1}
+È stato discusso brevemente lo standard OpenAPI 3.1, che l'azienda ha richiesto venga seguito per la descrizione delle API.  
+Abbiamo verificato di aver compreso i punti cardine dello standard, chiedendo conferma di quanto appreso in fase di studio.  
+Quanto esposto è stato approvato dall'azienda.
+
+%\newpage
+
+\section{Conclusioni}
+Questo confronto con l'azienda è stato molto utile per proseguire nella progettazione del prodotto, ottenendo un riscontro su quanto finora considerato.  
+Ha inoltre permesso di chiarire alcuni dubbi tecnici e consolidare gli ultimi requisiti obbligatori da sviluppare per la PB.
+    
+    \newpage
+    \newpage
+
+
+
+
+\end{document}
