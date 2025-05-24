@@ -1,0 +1,78 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+% l'header potrebbe avere altezza inconsistente tra pagine
+\setlength{\headheight}{40.5633pt}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\geometry{a4paper,total={155mm,240mm},top=30mm,}
+
+\def \titolo {VERBALE ESTERNO 2025-05-23}
+% Si può lasciare vuoto se non necessario
+\def \sottotitolo {Incontro con Zucchetti S.p.A.}
+\def \azienda {Zucchetti S.p.A.}
+
+\begin{document}
+    \sloppy
+    % titolo
+    \input{title.tex}
+
+    % header di pagina 
+    \pagestyle{fancy}
+    \lhead{\includegraphics[width=2cm]{logo.png}}
+    \rhead{\titolo}
+    \headsep = 15mm
+    % versionamento
+    \input{version.tex} 
+    \newpage
+    % indice
+    \renewcommand{\contentsname}{Indice}
+    \tableofcontents
+    \newpage
+
+    % informazioni incontro
+    \input{info.tex}
+    
+    % firma
+    \input{signature.tex}
+    \newpage
+
+    % main
+    \section{Resoconto dell'incontro}
+    Con l'approssimarsi della data di consegna prevista nel piano di progetto, il gruppo ha richiesto un incontro con l'azienda al fine di ottenere conferma del pieno soddisfacimento dei requisiti obbligatori e della conformità della web‑app alle specifiche iniziali e agli accordi raggiunti nei precedenti incontri. 
+
+    \subsection{Quesito 1 - Terminologia polisemica}
+    Nel corso dell’esposizione sullo stato attuale dell’applicativo il gruppo ha presentato la nuova funzionalità "Blocchi di domande" , sviluppata in risposta alle richieste aziendali. 
+    Da questa presentazione è scaturita una riflessione sulla terminologia impiegata: l’azienda ha evidenziato che parole polisemiche come blocco possono risultare ambigue, potrebbero infatti richiamare tanto un raggruppamento di domande quanto un blocco di codice o un malfunzionamento. 
+    Per evitare equivoci si è quindi concordato di sostituire blocco con termini più espliciti, neutrali e adatti al contesto, quali collezione o insieme.
+
+    \subsection{Quesito 2 - Design pattern}
+    Il gruppo ha presentato all’azienda gli attuali design pattern adottati per la realizzazione dell’applicativo, illustrando, per quanto riguarda il front-end, il passaggio dal pattern “container–presentational” (impiegato in precedenza) a una struttura incentrata su "hooks" o "contesti" per separare logica e presentazione. 
+    Questo cambio è stato motivato dal fatto che il pattern container–presentational, nato quando React utilizzava le classi, è oggi considerato datato e meno manutenibile. L’azienda ha concesso piena libertà di scelta su questo fronte, confermando comunque di condividere la decisione presa.
+
+    \subsection{Quesito 3 - Integrazione con l'infrastruttura aziendale}
+    Al termine dell’incontro l’azienda ha proposto di organizzare una dimostrazione in presenza nei propri uffici, invitando il gruppo a presentare la web-app direttamente sull’infrastruttura aziendale. Sia per mostrare il progetto all'azienda, sia per testare l’integrazione con i loro endpoint Ollama/DeepSeek e le GPU interne. 
+    Questo appuntamento potrà essere fissato anche dopo la consegna ufficiale del progetto all’università, così da non interferire con le scadenze accademiche ma consentire comunque un collaudo congiunto e la raccolta di feedback utili per eventuali evoluzioni future.
+
+    \newpage
+    
+    \section{Conclusioni}
+    L’azienda ha confermato che, allo stato attuale, la web-app soddisfa tutti i requisiti obbligatori fissati all’inizio del progetto e ribaditi nei precedenti incontri. 
+    Nel breve periodo il gruppo si impegna a sostituire il termine "blocco" con una denominazione più chiara in tutta l’interfaccia e a pianificare la sessione dimostrativa presso la sede aziendale, dove verrà collaudata l’integrazione con la loro infrastruttura.
+    
+    \newpage
+    \newpage
+
+
+
+
+\end{document}
